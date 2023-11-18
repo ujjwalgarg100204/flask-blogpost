@@ -1,0 +1,9 @@
+{% extends 'shared/layout.html' %} {% block content %}
+    <div class="px-4">{% include 'home/new_blog.html' %}</div>
+
+    <div class="flex gap-8 flex-wrap justify-center mt-12 px-4 md:px-0" id="blogs">
+        {% for blog in blogs %} {{ render_partial("blog/blog_card.html", blog=blog) }}
+        {% endfor %}
+    </div>
+
+{% endblock content %}
